@@ -5,7 +5,7 @@ console.log(req,res)
 res.end('Welcome')
 }
 let server = http.createServer(handleServer)
-server.listen(3000,'localhost',()=>{
+server.listen(4000,'localhost',()=>{
     console.log('Server is responding')
 })
 
