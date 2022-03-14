@@ -15,8 +15,8 @@ if(req.method==='GET' && pathName==='/'){
     res.write('<h2>This is all about NodeJS </h2>')
     res.end()
 } else if(req.method==='POST' && pathName==='/about'){
-    res.write(`${JSON.parse(`{"message":"this is a post request"}`)}`)
-    res.end()
+    res.setHeader('Content-Type','application/json')
+    res.end(`{message: this is a post request}`)
 }else{
     res.statusCode = 404
     res.end('Page not found')
